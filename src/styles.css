@@ -1,0 +1,202 @@
+/* Center everything */
+.app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background-color: #f8f8f8;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Title */
+  .title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* Card Row */
+  .card-row {
+    display: flex
+;
+padding: 5rem 0rem;;
+    justify-content: center;
+    gap: 4%;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+  /* Card Container */
+  .card-container {
+    width: 140px;
+    height: 200px;
+    perspective: 1000px; /* Enables 3D effect */
+    cursor: pointer;
+  }
+  
+  /* Card Flip Effect */
+  .card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+  }
+  
+  .card.flipped {
+    transform: rotateY(180deg);
+  }
+  
+  /* Front & Back */
+  .card-front,
+  .card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  /* Front Side */
+  .card-front {
+    background-color: white;
+  }
+  
+  .card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  /* Back Side */
+  .card-back {
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: bold;
+    transform: rotateY(180deg);
+    text-align: center;
+    padding: 10px;
+  }
+  
+  /* Reset Button */
+  .reset-button {
+    margin-top: 5%;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: white;
+    background-color: #000000; 
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .reset-button:hover {
+    background-color: black;
+  }
+  
+  .reset-button:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+  }
+  
+  /* Info Text */
+  .info-text {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #666;padding-top:15px;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .card-row {
+        display: flex
+    ;
+    padding: 5rem 0rem;;
+        justify-content: center;
+        gap: 15% !important;
+        flex-wrap: wrap;
+        width: 100%;
+      }
+      
+    .card-container {
+      width: 110px;
+      height: 160px;
+    }
+    .reset-button {
+      font-size: 1rem;
+      padding: 10px 20px;
+    }
+    .title {
+      font-size: 1.8rem;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .card-container {
+      width: 180px;
+      height: 260px;
+    }
+    .reset-button {
+      font-size: 1.2rem;
+      padding: 14px 28px;
+    }
+    .title {
+      font-size: 2.5rem;
+    }
+  }
+/* Logo Styling */
+.logo {
+    width: 120px;
+    margin-bottom: 15px;
+  }
+  
+  /* Responsive Logo */
+  @media (max-width: 768px) {
+    .logo {
+      width: 100px;
+    }
+    .emoji{font-size:50px;}
+    .cont div div{flex-direction: column;}
+  }
+  
+  @media (min-width: 1024px) {
+    .logo {
+      width: 150px;
+    }
+    .emoji{font-size:100px;}
+    .cont div div{flex-direction: row;}
+  }
+    /* Butterflies Animation */
+.butterfly {
+    position: absolute;
+    width: 50px;
+    animation: fly 8s linear infinite;
+  }
+  .b1{top:5%;}
+  .b2{top:10%;}
+  .b3{top:22%;}
+  @keyframes fly {
+    0% {
+      transform: translateY(0) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-50px) rotate(10deg);
+    }
+    100% {
+      transform: translateY(0) rotate(-10deg);
+    }
+  }
+  .app,body {
+    background: linear-gradient(to right, #f36066, #fad0c4);
+  }
+ 
