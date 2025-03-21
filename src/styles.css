@@ -83,7 +83,6 @@ padding: 5rem 0rem;;
     font-weight: bold;
     transform: rotateY(180deg);
     text-align: center;
-    padding: 10px;
   }
   
   /* Reset Button */
@@ -210,4 +209,4 @@ padding: 5rem 0rem;;
     color: black;
     font-weight: bold;
 }
- .card-back h6{font-size: 12px;}
+ .card-back h6{font-size: 12px;padding: 1rem;}
