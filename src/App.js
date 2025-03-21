@@ -108,8 +108,9 @@ function EmotionSelection() {
       <Tabs value={selectedTab} onChange={handleChange} centered className="cont">
         {emotions.map((emotion, index) => (
           <Tab 
-          key={emotion.name} 
-          label={<span className="emoji">{emotion.emoji}</span>} 
+          key={emotion.name}
+          className="tb"
+          label={<span className="emoji">{emotion.emoji} {emotion.name} </span>} 
         />        
         ))}
       </Tabs>

@@ -120,12 +120,14 @@ padding: 5rem 0rem;;
   @media (max-width: 768px) {
     .card-row {
         display: flex
-    ;
-    padding: 5rem 0rem;;
-        justify-content: center;
-        gap: 15% !important;
-        flex-wrap: wrap;
-        width: 100%;
+        ;
+                padding: 1rem 0rem;
+                justify-content: center;
+                gap: 5% !important;
+                width: 100%;
+                flex-wrap: nowrap;
+                flex-direction: row;
+                align-items: center;
       }
       
     .card-container {
@@ -137,7 +139,9 @@ padding: 5rem 0rem;;
       padding: 10px 20px;
     }
     .title {
-      font-size: 1.8rem;
+        font-size: 30px !important;
+        font-weight: bold !important;
+        margin: 2rem 0 !important;
     }
   }
   
@@ -165,16 +169,17 @@ padding: 5rem 0rem;;
     .logo {
       width: 100px;
     }
-    .emoji{font-size:50px;}
-    .cont div div{flex-direction: column;}
+    .emoji{font-size:22px;}
+    .cont div div{flex-direction: column;gap: 15px;
+        flex-wrap: wrap;}
   }
   
   @media (min-width: 1024px) {
     .logo {
       width: 150px;
     }
-    .emoji{font-size:100px;}
-    .cont div div{flex-direction: row;}
+    .emoji{font-size:26px;}
+    .cont div div{flex-direction: row;gap: 15px;margin-top: 100px;}
   }
     /* Butterflies Animation */
 .butterfly {
@@ -199,4 +204,10 @@ padding: 5rem 0rem;;
   .app,body {
     background: linear-gradient(to right, #f36066, #fad0c4);
   }
- 
+  .cont button{
+    background: white;
+    border-radius: 15px;
+    color: black;
+    font-weight: bold;
+}
+ .card-back h6{font-size: 12px;}
